@@ -1,0 +1,58 @@
+// main: ../style.less
+/* Contacts */
+
+.left {
+  align-items: center;
+  font-weight: 300;
+  letter-spacing: .2px;
+}
+.grid__items span {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.conacts__logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.conacts__logo{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+  margin: 0 5px; 
+}
+.conacts__logo svg{
+  height: 100%;
+  width: 100%;
+}
+.conacts__logo.sm svg {
+  height: 85%;
+//  fill: #fff;
+  filter: drop-shadow(1px 1px 0px #fff);
+//  filter: drop-shadow(-1px -1px 0px #fff);
+} 
+.phone__mail, .phone__mail a{
+  margin: 10px 5px 0;
+  font-weight: 400;
+  color: @lYellow;
+}
+.map__scr {
+  cursor: pointer;
+  background: url('../img/map_prev.jpg') center no-repeat;
+  background-size: cover;
+}
+.open__map-text {
+  display: none;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @bYellow;
+}
+
+

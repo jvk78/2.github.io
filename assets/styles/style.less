@@ -1,0 +1,87 @@
+@import "blocks/vars";
+@import "blocks/slick-theme";
+/* Main */
+html, body {
+  font-size: 16px;
+  font-family: 'Oswald';
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+*, *:before,*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6,{
+  margin: 0;}
+
+h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 20px auto;
+  text-align: center;
+  color: @brown;
+}
+section {
+  position: relative;
+  background-color: #fff8d5;
+  overflow: hidden;
+}
+
+.woodBg {
+  background: url(../img/wood_bg.jpg) center no-repeat;
+}
+.oldPaperBg {
+  background: url(../img/old_paper_bg.jpg) center no-repeat;
+}
+.woodBg, .oldPaperBg {
+    background-size: cover;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+//  border: 1px solid #000;
+//  background-color: #fff;
+}
+a {
+  text-decoration: none;
+  color: @main;
+}
+.grid__wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-gap: 10px;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0px 20px;
+}
+.grid__items {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+//  border: 1px solid #ff0101;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.text__white {
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+@import "blocks/home";
+@import "blocks/about";
+@import "blocks/products";
+@import "blocks/media";
+@import "blocks/contacts";
+@import "blocks/popup";
+@import "blocks/veiwports";
+
+
+
