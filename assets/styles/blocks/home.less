@@ -59,8 +59,8 @@ input:checked + label {
 }
 .home__circle{
   transform: translateX(-50%);
-  width: 90%;
-  height: 90%;
+  width: 87%;
+  height: 87%;
   border: 2px solid #fff;
   border-bottom: none;
   border-top-left-radius: 100vw;
@@ -82,6 +82,12 @@ input:checked + label {
   height: 20px;
   background-color: #fff;
   border-radius: 50%;
+  background-color: #ffa700;
+  border: 1px solid #fff;
+  box-shadow: 1px 1px 2px #000;
+//  box-shadow: inset 2px 2px 5px #ffa700, inset -2px -2px 5px #ffa700;
+  
+  
 }
 .home__ruller {
   position: relative;
@@ -93,22 +99,22 @@ input:checked + label {
   height: 100%;
   left: 50%;
   transform-origin: 50% 100%;
-  &:nth-child(1),
-  &:nth-child(5) {
-  transform: translateX(-50%) rotate(-60deg);
+  &:nth-child(1)
+  {
+    transform: translateX(-50%) rotate(-60deg);
   }
   &:nth-child(2) {
-  transform: translateX(-50%) rotate(-25deg);
+    transform: translateX(-50%) rotate(-25deg);
   }
   &:nth-child(3) {
-  transform: translateX(-50%) rotate(25deg);
+    transform: translateX(-50%) rotate(25deg);
   }
   &:nth-child(4) {
-  transform: translateX(-50%) rotate(60deg);
+    transform: translateX(-50%) rotate(60deg);
   }
   &:nth-child(5) {
-  height: 92.5%;
-  transition: .5s ease-in-out;
+    height: 89.5%;
+    transition: .5s ease-in-out;
   }
 }
 .nav__icon {
@@ -123,6 +129,8 @@ input:checked + label {
   margin-right: 10px;
   background-color: rgba(255, 255, 255, .7);
 }
+
+
 .nav__icon-content {
   display: block;
   height: 70%;
@@ -131,9 +139,12 @@ input:checked + label {
 }
 .nav__link {
   margin-bottom: 5px;
-  color: #fff;
+  color: #cbcbcb;
   font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;
   z-index: 1;
+  &:hover {
+    color: #fff;
+  }
 }
