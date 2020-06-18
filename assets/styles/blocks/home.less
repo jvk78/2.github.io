@@ -1,23 +1,60 @@
 // main: ../style.less
 /* Contacts */
-.home__lang {
+.smal__nav {
   display: flex;
-  justify-content: flex-end;
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+  background: none;
+  padding: 5px 0;
+  transition: .5s;
+}
+.sm__nav__items {
+  display: flex;
+  justify-content: space-between;
+}
+.sm__nav__menu {
+  transform: translateY(-40px);
+  transition: .5s;
+}
+.sm__nav__wrapper,
+.home__lang,
+.sm__nav__menu,
+.sm__nav__items,
+.sm__nav__icon {
+  display: flex;
   align-items: center;
-  height: 50px;
-  border-bottom: 1px solid rgba(255,255,255,.7);
+}
+ .sm__nav__link, .sm__nav__icon {
+  transition: .2s;
+}
+.sm__nav__wrapper {
+  margin-right: 25px;
+}
+.sm__nav__icon {
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+.sm__nav__icon, .lang {
+  width: 25px;
+  height: 25px;
+}
+.sm__nav__link, .lang {
+  font-size: 14px;
+  color: #cbcbcb;
+  text-transform: uppercase;
 }
 .lang {
-  width: 35px;
-  height: 35px;
-  margin: 0 -1.5px;
+  margin: 0 2.5px;
   text-align: center;
   text-transform: uppercase;
-  line-height: 29px;
+  line-height: 23px;
   transition: .2s;
-  border: 3px solid transparent;
+  border: 1px solid transparent;
   border-radius: 50%;
-  color: #cbcbcb;
   z-index: 1;
   &:last-child {
     margin-right: 0;
@@ -27,9 +64,12 @@ input {
   display: none;
 }
 input:checked + label {
-  background-color: rgba(255,255,255,.7);
-  border: 3px solid #fff;
-  color: #7b7b7b; 
+  background-color: rgba(255,255,255,.5);
+  border: 1px solid #fff;
+  color: #fff; 
+}
+.home {
+  padding-top: 20px;
 }
 .home__logo {
   display: flex;
@@ -82,12 +122,9 @@ input:checked + label {
   height: 20px;
   background-color: #fff;
   border-radius: 50%;
-  background-color: #ffa700;
+  background-color: #feec00;
   border: 1px solid #fff;
   box-shadow: 1px 1px 2px #000;
-//  box-shadow: inset 2px 2px 5px #ffa700, inset -2px -2px 5px #ffa700;
-  
-  
 }
 .home__ruller {
   position: relative;
@@ -129,8 +166,6 @@ input:checked + label {
   margin-right: 10px;
   background-color: rgba(255, 255, 255, .7);
 }
-
-
 .nav__icon-content {
   display: block;
   height: 70%;

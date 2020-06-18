@@ -38,7 +38,6 @@
     width: 75%;
     top: 0;
   }
-
   .home__circle,
   .nav__wrapper:nth-child(5) {
     display: none;
@@ -92,6 +91,18 @@
 
 /* -=736=-*/
 @media screen and (max-width: 736px) {
+  .sm__nav__link, .lang  {
+    font-size: 12px;
+  }
+  
+  .sm__nav__icon, .lang {
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  }
+  .sm__nav__wrapper {
+    margin-right: 15px;
+  }
   .nav__icon {
     width: 25px;
     height: 25px;
@@ -129,9 +140,10 @@
   }
 
   h1 {
-    margin: 10px auto;
+    margin: 40px auto 5px;
   }
 }
+
 
 /* -=525=-*/
 @media screen and (max-width: 525px) {
@@ -147,6 +159,13 @@
 
 /* -=420=-*/
 @media screen and (max-width: 420px) {
+  
+  .sm__nav__link{
+    display: none;
+  }
+  .sm__nav__wrapper {
+    margin-right: 5px;
+  }
   .home__logo {
     height: 20vw;
     width: 40vw;

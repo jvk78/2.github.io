@@ -1,5 +1,9 @@
 
-
+const homeSec = document.getElementById('home');
+const smNav = document.getElementById('smal__nav');
+const smNavMenu = document.getElementById('sm__nav__menu');
+const aboutSec = document.getElementById('about');
+const homeImg = document.getElementById('home__img');
 const playVideo = document.getElementById('play__video');
 const scrWraper = document.getElementById('scr__wrapper');
 const mapWraper = document.getElementById('map__wrapper');
@@ -10,14 +14,52 @@ const audioLang = document.getElementById('audio');
 const playerContainer = document.getElementById('player__container');
 const navLink = document.querySelectorAll('.nav__link');
 const inputLang = document.querySelectorAll('input');
-const leftProd = document.getElementById('left_slider')
-const rightProd = document.getElementById('right_slider')
+const leftProd = document.getElementById('left_slider');
+const rightProd = document.getElementById('right_slider');
+const anchors = document.querySelectorAll('a[href^="#"]')
 let currentLang = langRU;
 let audioURL = './assets/media/ru.mp3';
 let videoID = 'owvzQaJN1N8';
 
-/* Create Slider */
 
+/* -=Smooth Scroll =- */
+anchors.forEach(function(item){
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
+    const blockID = item.getAttribute('href').substr(1)
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+})
+
+/* -=Show Hide Menu =- */
+window.addEventListener('scroll', function(){
+  let topAbout = aboutSec.getBoundingClientRect().top
+  if (topAbout <= 50) {
+    smNavMenu.style.transform = 'translateY(0)';
+    smNav.style.background = 'rgba(0,0,0,.9)';
+  } else {
+    smNavMenu.style.transform = 'translateY(-40px)'
+    smNav.style.background = 'none';
+  }
+})
+
+
+/* -=Parallax =- */
+function parallaxHeaderImg(event) {
+  homeImg.style.transform = `translate(${event.clientX*5/100}px,calc(${-50}% + ${event.clientY*5/100}px))`;
+}
+
+window.addEventListener('scroll', () => {
+  let value = window.scrollY;
+  homeSec.style.top = value * .5 + 'px';
+  homeSec.style.opacity = 1 - (value/(window.innerHeight -150));
+})
+document.addEventListener('mousemove', parallaxHeaderImg);
+
+/* Create Slider */
 function createSlider(base, slider) {
   let SlideHTML = '';
   base.forEach(function(elem) {
@@ -32,8 +74,6 @@ function createSlider(base, slider) {
 }
 createSlider(prodLeft, leftProd)
 createSlider(prodRight, rightProd)
-
-
 
 /* Change Lang */
 inputLang.forEach(function (item) {

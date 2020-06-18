@@ -318,6 +318,14 @@
       <path fill-rule="evenodd" clip-rule="evenodd" fill="#FBDF07" d="M413.301,63.993c0-0.957,0-1.854,0-2.835
 	c1.089-0.209,2.196-0.397,2.989,0.543c0.276,0.328,0.361,1.188,0.127,1.508C415.667,64.235,414.494,64.089,413.301,63.993z" />
     </symbol>
+    <symbol id="main_icon" viewBox="0 0 109.469 88.689">
+      <g>
+	<polygon points="87.302,23.788 87.302,10.561 76.669,10.561 76.669,15.981 54.936,0 54.791,0.203 54.622,0 0,40.084 3.831,45.274 
+		54.771,7.883 105.651,45.274 109.469,40.084 	"/>
+	<polygon points="54.936,13.726 54.771,13.938 54.622,13.726 0,53.791 3.831,59 14.464,51.179 14.464,88.689 46.004,88.689 
+		46.004,58.785 63.242,58.785 63.242,88.689 95.085,88.689 95.085,51.225 105.651,59 109.469,53.791 	"/>
+</g>
+    </symbol>
     <symbol id="info_icon" viewBox="0 0 13.646 28.35">
       <g>
         <path d="M12.225,21.714c-1.201-0.528-3.349,2.925-4.584,2.925c-0.327,0-0.496-0.293-0.496-0.587c0-0.66,0.457-1.707,0.704-2.338
@@ -362,14 +370,78 @@
   <!-- End SVG Elements -->
 
   <!-- Home -->
-  <section class="home woodBg" id="home">
+  <section class="smal__nav" id="smal__nav">
     <div class="container">
+     
+     <div class="sm__nav__items">
+       
+       <div class="sm__nav__menu" id="sm__nav__menu" >
+       
+       <div class="sm__nav__wrapper">
+            <a href="#main" class="sm__nav__icon">
+              <svg class="nav__icon-content">
+                <use xlink:href="#main_icon"></use>
+              </svg>
+            </a>
+            <a href="#main" class="sm__nav__link" id="sm_nav_main">Главная</a>
+        </div>
+       <div class="sm__nav__wrapper">
+            <a href="#about" class="sm__nav__icon">
+              <svg class="nav__icon-content">
+                <use xlink:href="#info_icon"></use>
+              </svg>
+            </a>
+            <a href="#about" class="sm__nav__link" id="sm_nav_company">О компании</a>
+        </div>
+       <div class="sm__nav__wrapper">
+            <a href="#products" class="sm__nav__icon">
+              <svg class="nav__icon-content">
+                <use xlink:href="#products_icon"></use>
+              </svg>
+            </a>
+            <a href="#products" class="sm__nav__link" id="sm_nav_prod">Продукция</a>
+        </div>
+       <div class="sm__nav__wrapper">
+            <a href="#media" class="sm__nav__icon">
+              <svg class="nav__icon-content">
+                <use xlink:href="#media_icon"></use>
+              </svg>
+            </a>
+            <a href="#media" class="sm__nav__link" id="sm_nav_media">Медиа</a>
+        </div>
+       <div class="sm__nav__wrapper">
+            <a href="#contacts" class="sm__nav__icon">
+              <svg class="nav__icon-content">
+                <use xlink:href="#contacts_icon"></use>
+              </svg>
+            </a>
+            <a href="#contacts" class="sm__nav__link" id="sm_nav_contacts">Контакты</a>
+        </div>
+       
+       
+       
+       </div>
+     
       <form action="#" class="home__lang" id="form">
         <input type="radio" id="ru" name="lang" value="ru" checked>
         <label for="ru" class="lang">ru</label>
         <input type="radio" id="kz" name="lang" value="kz">
         <label for="kz" class="lang">kz</label>
       </form>
+       
+      
+     </div>
+      
+      
+      
+    </div>
+  
+  
+  </section>
+  <div id="main"></div>
+  <section class="home woodBg" id="home">
+    <div class="container">
+      
       <div class="home__logo">
         <svg>
           <use xlink:href="#rollton"></use>
@@ -377,7 +449,7 @@
       </div>
       <div class="home__nav">
         <div class="home__circle"></div>
-        <img class="home__img" src="assets/img/header_img.png" alt="header_img">
+        <img class="home__img" id="home__img" src="assets/img/header_img.png" alt="header_img">
         <div class="home__ruller">
           <div class="nav__wrapper">
             <div class="nav__icon">

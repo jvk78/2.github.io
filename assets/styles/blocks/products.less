@@ -1,12 +1,10 @@
 // main: ../style.less
 /* Products */
-
 .grid__items.line::after {
   content: '';
   position: absolute;
   bottom: 0;
   right: -6.5px;
-//  transform: translate(-50%, -50%);
   width: 1px;
   height: 100%;
   background-color: @bYellow;
@@ -30,7 +28,6 @@
   align-items: center;
   margin: 10px auto;
   padding-bottom: 20px;
-//  border: 1px solid #010bff;
   &:focus {
     outline: none;
   }
@@ -39,9 +36,6 @@
   position: relative;
   width: 250px;
   height: 250px;
-//  background-color: rgba(255,255,255,.7);
-//  border-radius: 50%;
-//  border: 1px solid @bYellow;
   margin-bottom: 15px;
 }
 .products__img img {
@@ -50,6 +44,5 @@
   transform: translate(-50%, -50%);
   position: absolute;
   height: 90%;
-  filter: drop-shadow(@shadowSoft)
-//  background-color: #d44a4a;
+  filter: drop-shadow(1px 1px 5px #000)
 }
