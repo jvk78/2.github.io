@@ -96,9 +96,9 @@
   }
   
   .sm__nav__icon, .lang {
-  width: 20px;
-  height: 20px;
-  line-height: 18px;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
   }
   .sm__nav__wrapper {
     margin-right: 15px;
@@ -140,11 +140,26 @@
   }
 
   h1 {
-    margin: 40px auto 5px;
+    margin: 60px auto 5px;
   }
 }
 
 
+/* -=570=-*/
+@media screen and (max-width: 570px) {
+ .sm__nav__icon, .lang {
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  }
+  
+  .sm__nav__link{
+    display: none;
+  }
+  .sm__nav__wrapper {
+    margin-right: 5px;
+  }
+}
 /* -=525=-*/
 @media screen and (max-width: 525px) {
   .nav__link {
@@ -160,12 +175,6 @@
 /* -=420=-*/
 @media screen and (max-width: 420px) {
   
-  .sm__nav__link{
-    display: none;
-  }
-  .sm__nav__wrapper {
-    margin-right: 5px;
-  }
   .home__logo {
     height: 20vw;
     width: 40vw;

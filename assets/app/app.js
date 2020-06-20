@@ -16,32 +16,32 @@ const navLink = document.querySelectorAll('.nav__link');
 const inputLang = document.querySelectorAll('input');
 const leftProd = document.getElementById('left_slider');
 const rightProd = document.getElementById('right_slider');
-const anchors = document.querySelectorAll('a[href^="#"]')
 let currentLang = langRU;
 let audioURL = './assets/media/ru.mp3';
 let videoID = 'owvzQaJN1N8';
+//const anchors = document.querySelectorAll('a[href^="#"]')
 
 
 /* -=Smooth Scroll =- */
-anchors.forEach(function(item){
-  item.addEventListener('click', function (e) {
-    e.preventDefault();
-    const blockID = item.getAttribute('href').substr(1)
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
-})
+//anchors.forEach(function(item){
+//  item.addEventListener('click', function (e) {
+//    e.preventDefault();
+//    const blockID = item.getAttribute('href').substr(1)
+//    document.getElementById(blockID).scrollIntoView({
+//      behavior: 'smooth',
+//      block: 'start'
+//    })
+//  })
+//})
 
 /* -=Show Hide Menu =- */
 window.addEventListener('scroll', function(){
   let topAbout = aboutSec.getBoundingClientRect().top
   if (topAbout <= 50) {
     smNavMenu.style.transform = 'translateY(0)';
-    smNav.style.background = 'rgba(0,0,0,.9)';
+    smNav.style.background = 'rgba(0,0,0,.8)';
   } else {
-    smNavMenu.style.transform = 'translateY(-40px)'
+    smNavMenu.style.transform = 'translateY(-60px)'
     smNav.style.background = 'none';
   }
 })
@@ -146,21 +146,20 @@ $('.slider').slick({
 });
 
 /* Create Video*/
-function runVideo(){
+function runVideo() {
   playerContainer.innerHTML = '<div id="player"></div>';
-  
-playVideo.addEventListener('click', function () {
-  playVideo.style.opacity = '0';
-  setTimeout(function () {
-    playVideo.style.display = 'none'
-  }, 500);
-  createVideo()
-})
+
+  playVideo.addEventListener('click', function () {
+    playVideo.style.opacity = '0';
+    setTimeout(function () {
+      playVideo.style.display = 'none'
+    }, 500);
+    createVideo()
+  })
 }
 runVideo()
 
 function createVideo() {
-  console.log(2525)
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];

@@ -101,7 +101,7 @@ h6 {
 h1 {
   font-size: 30px;
   text-transform: uppercase;
-  margin: 60px auto 30px;
+  margin: 65px auto 35px;
   text-align: center;
   color: #471f09;
 }
@@ -159,7 +159,7 @@ a {
   z-index: 500;
   width: 100%;
   background: none;
-  padding: 5px 0;
+  padding: 10px 0 10px;
   transition: 0.5s;
 }
 .sm__nav__items {
@@ -167,7 +167,7 @@ a {
   justify-content: space-between;
 }
 .sm__nav__menu {
-  transform: translateY(-40px);
+  transform: translateY(-60px);
   transition: 0.5s;
 }
 .sm__nav__wrapper,
@@ -194,12 +194,12 @@ a {
 }
 .sm__nav__icon,
 .lang {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
 }
 .sm__nav__link,
 .lang {
-  font-size: 14px;
+  font-size: 16px;
   color: #cbcbcb;
   text-transform: uppercase;
 }
@@ -207,7 +207,7 @@ a {
   margin: 0 2.5px;
   text-align: center;
   text-transform: uppercase;
-  line-height: 23px;
+  line-height: 33px;
   transition: 0.2s;
   border: 1px solid transparent;
   border-radius: 50%;
@@ -631,9 +631,9 @@ iframe,
   }
   .sm__nav__icon,
   .lang {
-    width: 20px;
-    height: 20px;
-    line-height: 18px;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
   }
   .sm__nav__wrapper {
     margin-right: 15px;
@@ -668,7 +668,22 @@ iframe,
     left: 0;
   }
   h1 {
-    margin: 40px auto 5px;
+    margin: 60px auto 5px;
+  }
+}
+/* -=570=-*/
+@media screen and (max-width: 570px) {
+  .sm__nav__icon,
+  .lang {
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+  }
+  .sm__nav__link {
+    display: none;
+  }
+  .sm__nav__wrapper {
+    margin-right: 5px;
   }
 }
 /* -=525=-*/
@@ -683,12 +698,6 @@ iframe,
 }
 /* -=420=-*/
 @media screen and (max-width: 420px) {
-  .sm__nav__link {
-    display: none;
-  }
-  .sm__nav__wrapper {
-    margin-right: 5px;
-  }
   .home__logo {
     height: 20vw;
     width: 40vw;
